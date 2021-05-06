@@ -35,24 +35,25 @@ body {
     animation: imageAnimation 40s linear infinite; 
 }  
 .slideshow li:nth-child(1) { 
-    background-image: url(https://ae01.alicdn.com/kf/HTB11k87bzzuK1Rjy0Fpq6yEpFXac/beibehang-Wallpaper-custom-3D-HD-hand-painted-delicious-bread-fast-food-restaurant-tooling-background-wall-decoration.jpg) 
+    background-image: url(https://www.linguahouse.com/linguafiles/md5/d01dfa8621f83289155a3be0970fb0cb) 
   }
   .slideshow li:nth-child(2) { 
-    background-image: url(https://www.linguahouse.com/linguafiles/md5/d01dfa8621f83289155a3be0970fb0cb);
+    background-image: url(https://pixabay.com/static/uploads/photo/2015/09/14/11/43/restaurant-939435_960_720.jpg);
     animation-delay: 8s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(https://pixabay.com/static/uploads/photo/2015/09/14/11/43/restaurant-939435_960_720.jpg);
+    background-image: url(https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500);
     animation-delay: 16s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    background-image: url(https://ae01.alicdn.com/kf/HTB11k87bzzuK1Rjy0Fpq6yEpFXac/beibehang-Wallpaper-custom-3D-HD-hand-painted-delicious-bread-fast-food-restaurant-tooling-background-wall-decoration.jpg);
     animation-delay: 24s; 
   }
   .slideshow li:nth-child(5) { 
     background-image: url(https://trgrestaurantconsulting.com/wp-content/uploads/2018/04/Restaurant-feasibility-study-TRG-Restaurant-Consultant.jpg);
     animation-delay: 32s; 
 }
+
 @keyframes imageAnimation { 
     0% { 
       opacity: 0; 
