@@ -10,7 +10,7 @@ var comment = require("./models/comment.js");
 var user=require("./models/user");
 var seedDB=require("./seeds.js");
 var methodOverride=require("method-override");
-
+const port=process.env.PORT || 5000;
 
 var campgroundRoutes=require("./routes/campgrounds.js"),
     commentRoutes=require("./routes/comments.js"),
@@ -57,6 +57,6 @@ app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/",indexRoutes);
 
 
-app.listen(5000,function(){
+app.listen(port,function(){
     console.log("YelpCamp Server started on port 5000");
 });
