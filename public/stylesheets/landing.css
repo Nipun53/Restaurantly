@@ -1,0 +1,71 @@
+body {
+    background-color: #000;
+  }
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+#landing-header h1 {
+    color: #fff;
+}
+.slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 40s linear infinite; 
+}  
+.slideshow li:nth-child(1) { 
+    background-image: url(https://ae01.alicdn.com/kf/HTB11k87bzzuK1Rjy0Fpq6yEpFXac/beibehang-Wallpaper-custom-3D-HD-hand-painted-delicious-bread-fast-food-restaurant-tooling-background-wall-decoration.jpg) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://www.linguahouse.com/linguafiles/md5/d01dfa8621f83289155a3be0970fb0cb);
+    animation-delay: 8s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://pixabay.com/static/uploads/photo/2015/09/14/11/43/restaurant-939435_960_720.jpg);
+    animation-delay: 16s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+    animation-delay: 24s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://trgrestaurantconsulting.com/wp-content/uploads/2018/04/Restaurant-feasibility-study-TRG-Restaurant-Consultant.jpg);
+    animation-delay: 32s; 
+}
+@keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }

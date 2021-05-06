@@ -1,0 +1,63 @@
+<%- include('../partials/header') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Restaurantly</p>
+            <div class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 2</li>
+                <li class="list-group-item">Info 3</li>
+            </div>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="254" height="254" id="gmap_canvas" src="https://maps.google.com/maps?q=Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:254px;width:254px;}</style><a href="https://www.embedgooglemap.net">google maps embedded map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:254px;width:254px;}</style></div></div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail" style="padding:0%;">
+                <img class="img-responsive" src="<%= campground.image%>">
+                <div class="caption">
+                    <h4 class="pull-right">500Rs./Person(app.)</h4>
+                    <h4><a><%= campground.name %></a></h2>
+                    <p><%= campground.description %></p>
+                    <p><em>Submitted by: <%= campground.author.username %></em></p>
+                    <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                        <a href="/campgrounds/<%= campground._id %>/edit" class="btn btn-xs btn-warning">Edit</a>
+                        <form class="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>                                                                      
+            <div class="well">
+                <div class="text-right">
+                    <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                    <a href="/campgrounds/<%= campground._id %>/comments/new" class="btn btn-success">Add new Dish</a>
+                    <% } %>
+                </div>
+                <hr>
+                <div class=row>
+                    <div class="col-md-12">
+                        <% campground.comments.forEach(function(comment){ %>
+                                <strong><%= comment.text %>&nbsp;&nbsp;-&nbsp;&nbsp;<%= comment.pref %></strong>
+                                
+                                <span class="pull-right"><a href="/campgrounds/<%= campground._id %>/comments/watch" class="btn btn-success">Order</a></span>
+                                
+                            <p>
+                                BESTSELLER
+                            </p>
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                <a href="/campgrounds/<%=campground._id%>/comments/<%=comment._id%>/edit" class="btn btn-xs btn-warning">Edit</a>
+                                <form class="delete-form" action="/campgrounds/<%=campground._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                                    <button class="btn btn-xs btn-danger">Delete</button>
+                                </form>
+                            <% } %>       <br>                         
+                            
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+
+<%- include('../partials/footer') %>
